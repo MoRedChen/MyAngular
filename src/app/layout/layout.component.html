@@ -5,32 +5,47 @@
 </ul> -->
 
 
-<nav class="navbar navbar-default" role="navigation">
-    <!-- logo區 -->
-    <a [routerLink]="'/home'" class="navbar-brand"><img src="assets\imgs\logo.png" width="32" height="32" class="img-circle"></a>
+<!-- navbar 導覽列-->
+<nav class="navbar navbar-inverse navbar-nav navbar-fixed-top" role="navigation" id="topheader">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+          <span class="sr-only">選單切換</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+            <!-- logo區 -->
+            <a [routerLink]="'/home'" class="navbar-brand"><img src="assets\imgs\logo.png" width="32" height="32" class="img-circle"></a>
+        </div>
 
-    <!-- 左選單 -->
-    <ul class="nav navbar-nav">
-        <li><a [routerLink]="'/about'" routerLinkActive="active">About us</a></li>
-        <li><a [routerLink]="'/product'" routerLinkActive="active">Product</a></li>
-    </ul>
+        <!-- 手機隱藏選單區 -->
+        <div class="my-navbar rightIn">
+            <!-- 左選單 -->
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="'/about'" routerLinkActive="active">About us</a></li>
+                <li><a [routerLink]="'/product'" routerLinkActive="active">Product</a></li>
+            </ul>
 
-    <!-- 搜尋表單 -->
-    <!-- <form class="navbar-form navbar-right" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="請輸入關鍵字">
+            <!-- 搜尋表單
+          <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="請輸入關鍵字">
+              </div>
+              <button type="submit" class="btn btn-default">搜尋</button>
+          </form> -->
+
+            <!-- 右選單 -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#">Guess 您好</a></li>
+  <li><a href="#">登出</a></li>
+  <li><a href="#">個人設定</a></li> -->
+                <li><a [routerLink]="'/signup'">註冊</a></li>
+                <li><a [routerLink]="'/login'">登入</a></li>
+            </ul>
+        </div>
+        <!-- 手機隱藏選單區結束 -->
     </div>
-    <button type="submit" class="btn btn-default">搜尋</button>
-</form> -->
-
-    <!-- 右選單 -->
-    <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="#">Guess 您好</a></li>
-    <li><a href="#">登出</a></li>
-    <li><a href="#">個人設定</a></li> -->
-        <li><a [routerLink]="'/signup'">註冊</a></li>
-        <li><a [routerLink]="'/login'">登入</a></li>
-    </ul>
 </nav>
 
 

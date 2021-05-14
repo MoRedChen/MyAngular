@@ -1,101 +1,182 @@
-.active {
-    color: #f00;
-    background-color: rgba(8, 8, 8, 1);
+.navbar {
+    font-size: 16px;
+    font-family: "karla", "-apple-system", "BlinkMacSystemFont", "segoe ui", "微軟正黑體", "microsoft jhenghei", sans-serif;
+    margin-top: 0;
 }
 
-
-/* 頁面顏色 */
-
-@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);
-body {
-    background-color: rgba(247, 247, 247, 1);
-    font-family: 'cwTeXKai', serif;
-    font-size: 18px;
+.form-control {
+    font-size: 16px;
+    font-family: "karla", "-apple-system", "BlinkMacSystemFont", "segoe ui", "微軟正黑體", "microsoft jhenghei", sans-serif;
 }
 
+.dropdown-menu>li {
+    font-size: 16px;
+    font-family: "karla", "-apple-system", "BlinkMacSystemFont", "segoe ui", "微軟正黑體", "microsoft jhenghei", sans-serif;
+}
 
-/* ---------- navbar 相關 ------------------------- */
-
-
-/* 整體設定 */
-
-.navbar-default {
+.navbar-inverse .navbar-nav>li>a {
     color: #fff;
-    background-color: rgba(8, 8, 8, 1);
-    height: 50px;
-    margin-bottom: 0;
-    padding-left: 20px;
-    padding-right: 100px;
-    border-width: 0;
-    border-radius: 0;
 }
-
-.navbar-default,
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: rgba(8, 8, 8, 1);
-}
-
-
-/* logo */
 
 .navbar-brand {
-    padding: 9px 15px;
+    padding: 9px 20px;
 }
 
-
-/* 大標題 */
-
-.navbar-default .navbar-nav>li>a {
-    color: rgba(180, 180, 180, 1);
-    padding-bottom: 0;
-    font-size: 16px;
-}
-
-.navbar-default .navbar-right>li>a {
-    color: #fff;
-    padding-bottom: 0;
-    font-size: 16px;
-}
-
-
-/* 下拉選單-大標題 */
-
-.navbar-nav>li>.dropdown-menu {
-    margin-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    background-color: #444;
-}
-
-
-/* 下拉選單-展開 */
-
-.dropdown-menu>li>a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
+.btn-fzs {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: .75rem 1.5rem;
+    line-height: 1em;
+    opacity: .9;
     white-space: nowrap;
-    color: #fff;
-    font-size: 17px;
+    transform: translateZ(0);
+    font-size: 15px;
+}
+
+.fa-fz {
+    font-size: 25px;
+}
+
+@media screen and (min-width:768px) and (max-width: 1200px) {
+    .navbar .container {
+        width: 100%;
+    }
+    /* 漢堡選單與頁首 */
+    .navbar-toggle {
+        display: block;
+        float: right;
+        margin-right: 0;
+    }
+    .navbar-header {
+        width: 100%;
+    }
+    /* 自訂 */
+    .my-navbar {
+        position: fixed;
+        background-color: #2c2c2c;
+        overflow: auto;
+        width: 70%;
+        top: 50px;
+        z-index: 9;
+        height: calc(100vh - 50px);
+        transition: 1s;
+    }
+    .navbar-brand {
+        margin-left: 40px;
+    }
+    /* 自訂 */
+    /* 選單隱藏區 */
+    .collapsing.navbar-collapse {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .collapse.navbar-collapse {
+        /* padding: 0; */
+        margin-left: -15px;
+        margin-right: -15px;
+        display: none!important;
+    }
+    .collapse.navbar-collapse.in {
+        display: block!important;
+    }
+    /* 選單項目 */
+    .navbar-nav {
+        margin-left: -15px;
+        margin-right: -15px;
+        float: none;
+    }
+    .navbar-nav.navbar-right,
+    .navbar-form.navbar-left {
+        float: none!important;
+        display: block;
+        padding: 0;
+    }
+    .nav>li {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+    .navbar-nav>li>a {
+        line-height: 20px;
+    }
+    .navbar-form {
+        position: relative;
+    }
+    .navbar-form .form-group {
+        display: block;
+    }
+    .navbar-form .btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 6px 6px 0;
+    }
+    .navbar-form .form-control {
+        display: block;
+        width: 100%;
+    }
+    .navbar-right-none {
+        float: none !important;
+        margin-right: -15px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .navbar {
+        z-index: 10;
+    }
+    /* 自訂 */
+    .my-navbar {
+        position: fixed;
+        background-color: #2c2c2c;
+        overflow: auto;
+        width: 70%;
+        top: 50px;
+        z-index: 9;
+        height: calc(100vh - 50px);
+        transition: 1s;
+    }
+    .navbar-brand {
+        margin-left: 20px;
+    }
+    /* 自訂 */
+    .my-navbar .navbar-nav {
+        margin: 0;
+    }
+    .leftIn {
+        left: -100%;
+    }
+    .rightIn {
+        right: -100%;
+    }
+    .my-navbar.leftIn.open {
+        left: 0;
+    }
+    .my-navbar.rightIn.open {
+        right: 0;
+    }
+    .navbar-form {
+        margin: 10px;
+    }
+}
+
+.navbar {
+    margin-bottom: 0;
 }
 
 
-/* 下拉選單-展開 active */
-
-.dropdown-menu>.active>a,
-.dropdown-menu>.active>a:hover,
-.dropdown-menu>.active>a:focus {
-    background-color: #787878;
-    background-image: none;
-}
-
-
-/* -------------------------------------------------- */
+/* navbar 導覽列 結束 */
 
 .breadcrumb {
     margin: 20px;
