@@ -23,3 +23,19 @@
 .signUp>a {
     text-decoration: none;
 }
+
+.btn-transparent {
+    color: rgba(8, 8, 8, 0.5);
+    background-color: rgba(8, 8, 8, 0);
+    border-color: rgba(8, 8, 8, 0.5);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-transparent:focus,
+.btn-transparent:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(8, 8, 8, 0.8);
+    border-color: rgba(8, 8, 8, 1);
+    font-weight: bold;
+}
