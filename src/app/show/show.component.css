@@ -1,0 +1,33 @@
+.breadcrumb {
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.breadcrumb>li>a {
+    text-decoration: none;
+}
+
+.card-title {
+    font-size: 35px;
+}
+
+.introduction {
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.about {
+    padding-right: 20px;
+}
+
+.program {
+    border: solid;
+    border-color: rgba(230, 230, 230, 1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.imgmax200 {
+    margin-bottom: 20px;
+}

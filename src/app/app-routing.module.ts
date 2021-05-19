@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ShowComponent } from './show/show.component';
 
 // 延遲載入調整為預先載入
 import { PreloadAllModules } from '@angular/router';
@@ -42,7 +43,11 @@ const routes: Routes = [
       {
         path: 'product',
         component: ProductComponent,
-        canActivate: [LayoutGuard] // 路由守門員
+        //canActivate: [LayoutGuard] // 路由守門員
+      },
+      {
+        path: 'show',
+        component: ShowComponent
       },
       {
         path: 'login',

@@ -28,3 +28,18 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+.panel-group {
+    margin: 30px 25px;
+}
+
+.panel-title>a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.panel-body>a {
+    color: rgba(80, 80, 230, 1);
+    font-weight: bold;
+    text-decoration: none;
+}

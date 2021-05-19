@@ -4,6 +4,18 @@
     <li><a [routerLink]="'/product'" routerLinkActive="active">Product</a></li>
 </ul> -->
 
+<script>
+    $(function() {
+        $(window).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 300) {
+                $('#monitor').addClass('animate');
+                $('#phone').addClass('animate');
+            };
+
+        });
+    });
+</script>
 
 <!-- navbar 導覽列-->
 <nav class="navbar navbar-inverse navbar-nav navbar-fixed-top" role="navigation" id="topheader">
@@ -62,7 +74,7 @@
         <div class="item item-one active">
             <!-- <img src="https://picsum.photos/2800/700/?random=1"> -->
             <div class="container">
-                <div class="carousel-caption">
+                <div class="carousel-caption animate">
                     <h1>First page</h1>
                     <p>This is first page~</p>
                     <p><a class="btn btn-lg btn-transparent" href="#" role="button">Button</a></p>
@@ -73,7 +85,7 @@
         <div class="item item-two">
             <!-- <img src="https://picsum.photos/2800/700/?random=2"> -->
             <div class="container">
-                <div class="carousel-caption">
+                <div class="carousel-caption animate">
                     <h1>Second page</h1>
                     <p>This is second page~</p>
                     <p><a class="btn btn-lg btn-transparent" href="#" role="button">Button</a></p>
@@ -83,7 +95,7 @@
         <div class="item item-three">
             <!-- <img src="https://picsum.photos/2800/700/?random=3"> -->
             <div class="container">
-                <div class="carousel-caption">
+                <div class="carousel-caption animate">
                     <h1>Third page</h1>
                     <p>This is third page~</p>
                     <p><a class="btn btn-lg btn-transparent" href="#" role="button">Button</a></p>

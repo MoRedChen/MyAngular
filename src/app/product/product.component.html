@@ -72,7 +72,7 @@
 
         <div class="col-xs-12 col-sm-4" *ngFor="let product of productlists; index as i">
 
-            <a href="/{{i+1}}" class="thumbnail">
+            <a (click)="show(product)" [routerLink]="'/show'" class="thumbnail">
                 <img src="{{product.image}}" alt="">
                 <div class="caption">
                     <h2 class="ellipsis">{{product.name}}</h2>

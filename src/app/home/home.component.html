@@ -73,3 +73,53 @@
     <!-- Row -->
 </div>
 <!--Container -->
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default" *ngFor="let product of productlists; index as i">
+                    <div class="panel-heading" role="tab" id="panel{{i+1}}">
+                        <h4 class="panel-title">
+                            <a href="#{{i+1}}" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="{{i+1}}">
+                            {{product.name}}
+                          </a>
+                        </h4>
+                    </div>
+                    <div id="{{i+1}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panel{{i+1}}">
+                        <div class="panel-body">
+                            {{product.discription}}
+                            <br>
+                            <br>
+                            <a (click)="show(product)" [routerLink]="'/show'">閱讀更多>></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Row -->
+</div>
+<!--Container -->
+
+
+
+<script>
+    $('.section-scroll').bind('click', function(e) {
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 1000);
+        e.preventDefault();
+    });
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item'
+    });
+</script>
