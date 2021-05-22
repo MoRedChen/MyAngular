@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
 
   login(): void {
 
-    this.router.navigate(['product'], {
+    this.router.navigate(['home'], {
       queryParams: {
-        name: 'MoRed',
+      //   name: 'MoRed',
         isLogin: 'true'
       }
     });
