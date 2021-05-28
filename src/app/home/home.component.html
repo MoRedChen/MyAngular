@@ -17,58 +17,14 @@
 <!--Container -->
 
 
+
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-1"></div>
-        <div class="col-xs-12 col-sm-10">
-            <div class="url">
-
-                <div class="col-xs-12 col-sm-4">
-
-                    <div class="thumbnail">
-                        <a [routerLink]="'/about'">
-                            <img src="https://api.fnkr.net/testimg/350x200/aaaaaa" alt="">
-                        </a>
-                        <div class="caption">
-                            <h2 class="text-center">About us</h2>
-                            <p>在這裡講述了我們的名稱由來、發想理念及未來展望</p>
-                            <a [routerLink]="'/about'">閱讀更多>></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-xs-12 col-sm-4">
-
-                    <div class="thumbnail">
-                        <a [routerLink]="'/product'">
-                            <img src="https://api.fnkr.net/testimg/350x200/aaaaaa" alt="">
-                        </a>
-                        <div class="caption">
-                            <h2 class="text-center">Product</h2>
-                            <p>將要被丟棄的水果會被刊登在這裡，快來看看吧！</p>
-                            <a [routerLink]="'/product'">閱讀更多>></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-xs-12 col-sm-4">
-
-                    <div class="thumbnail">
-                        <a href="">
-                            <img src="https://api.fnkr.net/testimg/350x200/aaaaaa" alt="">
-                        </a>
-                        <div class="caption">
-                            <h2 class="text-center">Unknow</h2>
-                            <p>當前還沒有功能<br>正在努力開發中...</p>
-                            <a href="">閱讀更多>></a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+        <div class="col-xs-12 col-sm-3"></div>
+        <div class="col-xs-12 col-sm-9">
+            <h2 class="text-center big-title">現正熱銷</h2>
+            <hr>
         </div>
-        <div class="col-xs-12 col-sm-1"></div>
     </div>
     <!-- Row -->
 </div>
@@ -78,48 +34,80 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-xs-12 col-sm-3">
 
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
 
-                <div class="panel panel-default" *ngFor="let product of productlists; index as i">
-                    <div class="panel-heading" role="tab" id="panel{{i+1}}">
-                        <h4 class="panel-title">
-                            <a href="#{{i+1}}" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="{{i+1}}">
-                            {{product.name}}
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="headingOne">
+                        <h2 class="panel-title">
+                            <a [routerLink]="'/about'" class="btn btn-link collapsed" type="button" data-parent="#accordion2" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              About us
                           </a>
-                        </h4>
+                        </h2>
                     </div>
-                    <div id="{{i+1}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panel{{i+1}}">
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="headingTwo">
+                        <h2 class="panel-title">
+                            <a class="btn btn-link collapsed" type="button" data-parent="#accordion2" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Product
+                          </a>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
                         <div class="panel-body">
-                            {{product.discription}}
-                            <br>
-                            <br>
-                            <a (click)="show(product)" [routerLink]="'/show'">閱讀更多>></a>
+                            <li *ngFor="let product of productlists; index as i">
+                                <a (click)="show(product)" [routerLink]="'/show'">{{product.name}}</a>
+                            </li>
                         </div>
                     </div>
                 </div>
-
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="headingThree">
+                        <h2 class="panel-title">
+                            <a class="btn btn-link collapsed" type="button" data-parent="#accordion2" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              User
+                          </a>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                        <div class="panel-body">
+                            <li>
+                                <a [routerLink]="'/login'">登入</a>
+                            </li>
+                            <li>
+                                <a [routerLink]="'/signup'">註冊ˋ</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-    </div>
-    <!-- Row -->
-</div>
-<!--Container -->
 
 
 
-<script>
-    $('.section-scroll').bind('click', function(e) {
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 1000);
-        e.preventDefault();
-    });
-    $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item'
-    });
-</script>
+
+
+        <div class="col-xs-12 col-sm-9">
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4" *ngFor="let product of productlists; index as i">
+                    <div class="thumbnail">
+                        <img src="{{product.image}}" alt="">
+                        <div class="caption">
+                            <h2 class="ellipsis">{{product.name}}</h2>
+                            <p class="ellipsis">{{product.discription}}</p>
+                            <div class="text-right">
+                                <a (click)="show(product)" [routerLink]="'/show'">閱讀更多>></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row -->
+
+
+        </div>

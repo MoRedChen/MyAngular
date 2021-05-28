@@ -195,19 +195,19 @@
 .item-one {
     width: 100%;
     height: 400px;
-    background-image: url(https://picsum.photos/2800/700/?random=1);
+    background-image: url(src\assets\imgs\slider1-400.png);
 }
 
 .item-two {
     width: 100%;
     height: 400px;
-    background-image: url(https://picsum.photos/2800/700/?random=2);
+    background-image: url(src\assets\imgs\slider2-400.png);
 }
 
 .item-three {
     width: 100%;
     height: 400px;
-    background-image: url(https://picsum.photos/2800/700/?random=3);
+    background-image: url(src\assets\imgs\slider3-400.png);
 }
 
 .btn-transparent {

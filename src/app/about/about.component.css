@@ -26,7 +26,7 @@
 /* 名稱由來 */
 
 .bg1 {
-    background-image: url(src\assets\imgs\bg1.png);
+    background-image: url(src\assets\imgs\bg1.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -40,7 +40,7 @@
 /* 發想理念 */
 
 .bg2 {
-    background-image: url(src\assets\imgs\bg2.png);
+    background-image: url(src\assets\imgs\bg2.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -54,7 +54,7 @@
 /* 未來展望 */
 
 .bg3 {
-    background-image: url(src\assets\imgs\bg3.png);
+    background-image: url(src\assets\imgs\bg3.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

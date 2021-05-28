@@ -7,39 +7,54 @@
     text-decoration: none;
 }
 
-.thumbnail {
-    background-color: rgba(20, 20, 45, 0.9);
-    border-radius: 25px;
-    padding: 10px;
-    height: 100%;
+.breadcrumb {
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.thumbnail a>img {
-    border-radius: 20px;
+.breadcrumb>li>a {
+    text-decoration: none;
 }
 
-.thumbnail>.caption {
-    color: rgba(255, 255, 255, 1);
+a {
+    text-decoration: none;
 }
 
-.thumbnail>.caption>a,
-.thumbnail>.caption>a:hover {
-    color: rgba(200, 200, 200, 1);
+.big-title {
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 35px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.text-right>a {
+    color: rgba(100, 100, 100, 1);
     font-weight: bold;
     text-decoration: none;
+}
+
+.text-right>a:hover,
+.text-right>a:focus {
+    color: rgba(50, 50, 50, 1);
+}
+
+.imgmax200 {
+    margin-bottom: 20px;
 }
 
 .panel-group {
     margin: 30px 25px;
 }
 
-.panel-title>a {
+.panel-title>a,
+.panel-body>li>a {
     text-decoration: none;
     font-weight: bold;
-}
-
-.panel-body>a {
-    color: rgba(80, 80, 230, 1);
-    font-weight: bold;
-    text-decoration: none;
 }
