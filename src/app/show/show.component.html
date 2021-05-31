@@ -123,36 +123,17 @@
                 </div>
                 <div class="col-xs-12 col-sm-4">
                     <section class="program ">
-                        <h3>
-                            方案一
+                        <h3 class="text-center">
+                            購買
                         </h3>
-                        <h5>NT$3 / 每單位</h5>
+                        <h5>售價：NT$3 / 每單位</h5>
                         <div>
-                            一斤
+                            單位：一斤
                         </div>
                         <br>
-                        <input type="hidden" name="id" value="<%= project_support.id %>">
+                        <input type="hidden" name="id" value="">
                         <div class="form-group">
-                            <label for="quantity">購買數量</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="1 ~ 10" max="10" min="1" value="1">
-                        </div>
-                        <div class="clearfix">
-                            <button type="submit" class="btn btn-info float-right">購買</button>
-                        </div>
-                        <hr/>
-                    </section>
-                    <section class="program">
-                        <h3>
-                            方案二
-                        </h3>
-                        <h5>NT$5 / 每單位</h5>
-                        <div>
-                            兩斤
-                        </div>
-                        <br>
-                        <input type="hidden" name="id" value="<%= project_support.id %>">
-                        <div class="form-group">
-                            <label for="quantity">購買數量</label>
+                            <label for="quantity">購買數量 <small>(單位)</small></label>
                             <input type="number" class="form-control" id="quantity" name="quantity" placeholder="1 ~ 10" max="10" min="1" value="1">
                         </div>
                         <div class="clearfix">

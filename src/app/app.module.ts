@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms'; // <-- 匯入FormsModule
+
 // Routing Module
 import { AppRoutingModule } from './app-routing.module';
 
@@ -31,7 +33,8 @@ import { ShowComponent } from './show/show.component';
   imports: [
     BrowserModule,
     // FeatureModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // <-- 加入FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
