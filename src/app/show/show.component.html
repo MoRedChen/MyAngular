@@ -134,10 +134,48 @@
                         <input type="hidden" name="id" value="">
                         <div class="form-group">
                             <label for="quantity">購買數量 <small>(單位)</small></label>
-                            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="1 ~ 10" max="10" min="1" value="1">
+                            <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="1 ~ 10" max="10" min="1" value="1">
                         </div>
+                        <br>
                         <div class="clearfix">
-                            <button type="submit" class="btn btn-info float-right">購買</button>
+                            <!-- 未登入 -->
+                            <a *ngIf="!isLogin()" href='#not' data-toggle="modal" class="btn btn-info float-right">加入購物車</a>
+                            <div class="modal fade" id="not">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">系統提醒</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            請先登入，才能進行此動作
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" [routerLink]="'/login'">登入</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 已登入 -->
+                            <!-- <button type="submit" class="btn btn-info float-right">購買</button> -->
+                            <a *ngIf="isLogin()" href='#yes' data-toggle="modal" class="btn btn-info float-right">加入購物車</a>
+                            <div class="modal fade" id="yes">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">系統提醒</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            已將{{quantity}}個 {{product.name}} 加入購物車
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <hr/>
                     </section>

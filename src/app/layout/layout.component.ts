@@ -9,7 +9,7 @@ export class LayoutComponent implements OnInit {
 
   constructor() { }
 
-  userMail: string;
+  userMail: String;
 
   ngOnInit(): void {
   }

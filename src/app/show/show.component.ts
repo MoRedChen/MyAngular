@@ -18,9 +18,16 @@ export class ShowComponent implements OnInit {
     // console.log(id);
   }
 
+  quantity = 1;
+
   id;
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.queryParamMap.get('id');
+  }
+
+  /** 是否已經登入 */
+  isLogin() {
+    return sessionStorage.getItem('user') !== null;
   }
 
   // 變數productlists取得資料來源。
