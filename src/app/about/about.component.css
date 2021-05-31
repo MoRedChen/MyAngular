@@ -22,46 +22,88 @@
     font-weight: 500;
 }
 
-
-/* 名稱由來 */
-
-.bg1 {
-    background-image: url(src\assets\imgs\bg1.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 0;
-    height: 600px;
-    color: rgba(8, 8, 8, 1);
+@media screen and (min-width: 1200px) {
+    /* 名稱由來 */
+    .bg1 {
+        background-image: url(src\assets\imgs\bg1.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+        height: 600px;
+        color: rgba(8, 8, 8, 1);
+    }
+    /* 發想理念 */
+    .bg2 {
+        background-image: url(src\assets\imgs\bg2.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+        height: 600px;
+        color: rgba(230, 230, 230, 1);
+    }
+    /* 未來展望 */
+    .bg3 {
+        background-image: url(src\assets\imgs\bg3.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+        height: 600px;
+        color: rgba(8, 8, 8, 1);
+    }
 }
 
-
-/* 發想理念 */
-
-.bg2 {
-    background-image: url(src\assets\imgs\bg2.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 0;
-    height: 600px;
-    color: rgba(230, 230, 230, 1);
-}
-
-
-/* 未來展望 */
-
-.bg3 {
-    background-image: url(src\assets\imgs\bg3.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 0;
-    height: 600px;
-    color: rgba(8, 8, 8, 1);
+@media screen and (max-width:1200px) {
+    /* 名稱由來 */
+    .bg1 {
+        background-image: url(src\assets\imgs\bg1-center.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+        height: 600px;
+        color: rgba(8, 8, 8, 1);
+    }
+    .bg1-text {
+        background-color: rgba(230, 230, 230, 0.7);
+        border-radius: 15px;
+    }
+    /* 發想理念 */
+    .bg2 {
+        background-image: url(src\assets\imgs\bg2-center.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+        height: 600px;
+        color: rgba(230, 230, 230, 1);
+    }
+    .bg2-text {
+        background-color: rgba(8, 8, 8, 0.7);
+        border-radius: 15px;
+    }
+    /* 未來展望 */
+    .bg3 {
+        background-image: url(src\assets\imgs\bg3-center.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+        height: 600px;
+        color: rgba(8, 8, 8, 1);
+    }
+    .bg3-text {
+        background-color: rgba(230, 230, 230, 0.7);
+        border-radius: 15px;
+    }
 }
 
 
